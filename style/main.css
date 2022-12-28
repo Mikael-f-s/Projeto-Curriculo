@@ -1,0 +1,46 @@
+#main {
+    width: 90vw;
+    min-width: 300px;
+    display:flex;
+    flex-flow: nowrap column;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: rgb(37, 37, 37);
+}
+
+#main article {
+    min-width: 400px;
+}
+
+#knowledge, #knowledge section {
+    width: 40vw;
+    min-width: 300px;
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+    justify-items: center;
+}
+
+#knowledge section {
+    margin: 1em 0;
+    background-color: #D9D9D9;
+    height: 300px;
+}
+
+#knowledge nav {
+}
+
+#knowledge nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: nowrap row;
+}
+
+#knowledge nav ul li:nth-child(odd) {
+    margin: 0 1em;
+}
+
