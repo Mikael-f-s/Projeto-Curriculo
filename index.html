@@ -17,53 +17,59 @@
     <title>Prototipo Currículo</title>
 </head>
 <body>
-    <script src="script/script.js"></script>
-        <header id="header">
-            <div><img src="" alt=""></div>
-            <div></div>
-            <p>Olá, [Bom dia], eu me chamo Mikael, tenho [24] anos e atualmente sou estudante de tecnologia pela Rocketseat, votlei a estudar em julho de 2022 com o objetivo de me tornar desenvolvedor web, ainda sigo este caminho e por mais que seja dificil não pretendo desistir tão facilmente, espero que goste deste pequeno demonstrativo e aprecio quaisquer feedbacks que possa dar.</p>
-            <nav>
+    <header id="header">
+        <div><img src="" alt=""></div>
+        <div></div>
+        <p>Olá, [Bom dia], eu me chamo Mikael, tenho [24] anos e atualmente sou estudante de tecnologia pela Rocketseat, votlei a estudar em julho de 2022 com o objetivo de me tornar desenvolvedor web, ainda sigo este caminho e por mais que seja dificil não pretendo desistir tão facilmente, espero que goste deste pequeno demonstrativo e aprecio quaisquer feedbacks que possa dar.</p>
+        <nav>
+            <ul>
+                <li><a href="#">W</a></li>
+                <li><a href="#">In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <article id="knowledge">
+            <nav hidden>
                 <ul>
-                    <li><a href="#">W</a></li>
-                    <li><a href="#">In</a></li>
+                    <li id="nav_html">Html</li>
+                    <li>/</li>
+                    <li id="nav_css">Css</li>
+                    <li>/</li>
+                    <li id="nav_js">Js</li>
                 </ul>
             </nav>
-        </header>
-        <main id="main">
-            <article id="knowledge">
-                <h1>Conhecimentos</h1>
-                <nav>
-                    <ul>
-                        <li>Html</li>
-                        <li>/</li>
-                        <li>Css</li>
-                        <li>/</li>
-                        <li>Js</li>
-                    </ul>
-                </nav>
-                <section id="section_html">
-                    <h2>HTML</h2>
-                    <h3>Hypertext markep language</h3>
-                    <p>
-                        Resumo
-                    </p>
-                </section>    
-                <section id="section_css">
-                    <h2>CSS</h2>
-                    <h3>Cascading style Sheet</h3>
-                    <p>
-                        Resumo
-                    </p>
-                </section>
-                <section id="section_js">
-                    <h2>JS</h2>
-                    <h3>Javascript</h3>
-                    <p>
-                        Resumo
-                    </p>
-                </section>            
-            </article>
-        </main>
-        <footer></footer>    
+            <section id="section_defult" class="activeSection">
+                <h2>Conhecimentos</h2>
+                <p>
+                    Resumo
+                </p>
+            </section>
+            <section id="section_html" class="activeSection">
+                <h2>HTML</h2>
+                <h3>Hypertext markep language</h3>
+                <p>
+                    Resumo
+                </p>
+            </section>    
+            <section id="section_css" class="activeSection">
+                <h2>CSS</h2>
+                <h3>Cascading style Sheet</h3>
+                <p>
+                    Resumo
+                </p>
+            </section>
+            <section id="section_js" class="activeSection">
+                <h2>JS</h2>
+                <h3>Javascript</h3>
+                <p>
+                    Resumo
+                </p>
+            </section>            
+        </article>
+    </main>
+    <footer></footer>   
+    <script src="script/domcontrol.js"></script>
+    <script src="script/init.js"></script>
 </body>
 </html>

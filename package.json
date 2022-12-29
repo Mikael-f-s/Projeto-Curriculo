@@ -1,5 +1,23 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
+    "normalize": "^0.3.1",
     "normalize.css": "^8.0.1"
-  }
+  },
+  "name": "curriculo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikael-f-s/Projeto-Curriculo.git"
+  },
+  "keywords": [],
+  "author": "Mikael Fernandes Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikael-f-s/Projeto-Curriculo/issues"
+  },
+  "homepage": "https://github.com/Mikael-f-s/Projeto-Curriculo#readme",
+  "description": ""
 }

@@ -23,12 +23,6 @@
     justify-items: center;
 }
 
-#knowledge section {
-    margin: 1em 0;
-    background-color: #D9D9D9;
-    height: 300px;
-}
-
 #knowledge nav {
 }
 
@@ -44,3 +38,14 @@
     margin: 0 1em;
 }
 
+.activeSection {
+    margin: 1em 0;
+    background-color: #D9D9D9;
+    height: 300px;
+}
+
+.inactiveSection {
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+}
