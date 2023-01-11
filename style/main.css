@@ -7,7 +7,6 @@
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    color: rgb(37, 37, 37);
 }
 
 #main article {
@@ -37,7 +36,6 @@
 
 .activeSection {
     margin: 1em 0;
-    background-color: #D9D9D9;
     height: 300px;
 }
 

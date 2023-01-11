@@ -35,9 +35,7 @@ function arrayKnowledge (knowMenu, knowSec) {
 }
 
 // Hover para o article knowledge
-
 knowledgeMenu.addEventListener("mouseover", (event) => {
-    // console.log(event.target)
     if(event.target.getAttribute('id')!=null||"") {
         knowledgeAtt(event.target.getAttribute('id'),knowledgeItens)
     }
