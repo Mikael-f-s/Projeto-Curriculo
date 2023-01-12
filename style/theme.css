@@ -9,7 +9,7 @@
     background-color: rgb(210, 212, 222);
 }
 
-.lightTheme header div {
+.lightTheme header > div {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(21, 21, 21) 20%, rgb(21, 21, 21) 80%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -25,6 +25,6 @@
     background-color: rgb(45, 45, 59);
 }
 
-.darkTheme header div {
+.darkTheme header > div {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(205, 204, 210) 20%, rgb(205, 204, 210) 80%, rgba(0, 0, 0, 0) 100%);
 }

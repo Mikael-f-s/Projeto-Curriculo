@@ -1,7 +1,9 @@
 const knowledgeArticle = document.querySelector('#knowledge')
-const knowledgeSections = document.querySelectorAll('section')
+const knowledgeSections = knowledgeArticle.querySelectorAll('section')
 const knowledgeMenu = knowledgeArticle.children[0].children[0]
 const knowledgeItens = arrayKnowledge(knowledgeMenu.children, knowledgeSections)
+const themeSelecter = document.querySelector("#themeSelecter").children[1]
+const body = document.querySelector('body')
 
 // Iniciando a formatação
 // Muda o article knowledge para a apresentação padrão
@@ -50,5 +52,18 @@ function knowledgeAtt(hoverItem, knowItens) {
        hoverItem==knowItens[i].nav ?
         document.getElementById(knowItens[i].section).setAttribute('class', "activeSection") :
             document.getElementById(knowItens[i].section).setAttribute('class', 'inactiveSection')
+    }
+}
+
+// Verificando e mudando o tema da pagina
+
+themeSelecter.addEventListener('change', () => attTheme(body, themeSelecter))
+
+function attTheme(body, themeSelecter){
+    body.removeAttribute('class')
+    if(themeSelecter.checked == true){
+        body.setAttribute('class', 'darkTheme')
+    }else {
+        body.setAttribute('class', 'lightTheme')
     }
 }
