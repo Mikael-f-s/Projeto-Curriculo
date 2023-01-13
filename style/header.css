@@ -61,23 +61,3 @@
     background-color: rgb(26, 26, 168);
 }
 
-#themeSelecter {
-    margin: 20px 20px -30px 80%;
-    cursor: pointer;
-    display: flex;
-}
-
-#themeSelecter > div {
-    height: 20px;
-    width: 20px;
-    margin: 0;
-}
-
-#themeSelecter div:nth-child(1) {
-    background-color: black;
-}
-
-#themeSelecter div:nth-child(3) {
-    background-color: #fff;
-}
-

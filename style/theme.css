@@ -1,8 +1,55 @@
+/* Theme Selecter */
+
+#themeSelecter {
+    margin: 20px 20px -30px 80%;
+    cursor: pointer;
+    position: relative;
+}
+
+#themeSelecter input {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+#themeSelecter span {
+    height: 34px;
+    width: 60px;
+    position: absolute;
+    margin: 0;
+    border-radius: 20px;
+    background-color: rgb(45, 45, 59);
+    transition: .4s;
+}
+
+#themeSelecter span:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: rgb(210, 212, 222);
+    transition: .4s;
+}
+
+#themeSelecter input:checked + span {
+    background-color: rgb(210, 212, 222);
+}
+
+#themeSelecter input:checked + span:before {
+    background-color: rgb(45, 45, 59);
+    transform: translateX(26px);
+}
+
+
 /* LIGHT THEME */
 
 .lightTheme {
-    background-color: rgb(233, 232, 248);
+    background-color: rgb(236, 235, 245);
     color:rgb(39, 39, 44);
+    transition: .2s;
 }
 
 .lightTheme header, .lightTheme #knowledge section {
@@ -19,6 +66,7 @@
 .darkTheme {
     background-color: rgb(102, 108, 124);
     color:rgb(186, 192, 203);
+    transition: .2s;
 }
 
 .darkTheme header, .darkTheme #knowledge section {

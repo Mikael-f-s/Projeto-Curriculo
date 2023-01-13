@@ -2,7 +2,7 @@ const knowledgeArticle = document.querySelector('#knowledge')
 const knowledgeSections = knowledgeArticle.querySelectorAll('section')
 const knowledgeMenu = knowledgeArticle.children[0].children[0]
 const knowledgeItens = arrayKnowledge(knowledgeMenu.children, knowledgeSections)
-const themeSelecter = document.querySelector("#themeSelecter").children[1]
+const themeSelecter = document.querySelector("#themeSelecter").querySelector('input')
 const body = document.querySelector('body')
 
 // Iniciando a formatação
