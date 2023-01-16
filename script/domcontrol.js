@@ -4,8 +4,34 @@ const knowledgeMenu = knowledgeArticle.children[0].children[0]
 const knowledgeItens = arrayKnowledge(knowledgeMenu.children, knowledgeSections)
 const themeSelecter = document.querySelector("#themeSelecter").querySelector('input')
 const body = document.querySelector('body')
+const headerGreeting = document.querySelector('#header').querySelector('p').children[0]
+const headerMyAge = document.querySelector('#header').querySelector('p').children[1]
+const fullDate = new Date()
+const hours = fullDate.getHours()
+const myBirthDate = new Date(1998,06,02)
+const msToYear = 1000*60*60*24*365
+const myAge = Math.floor((fullDate - myBirthDate)/msToYear)
+
 
 // Iniciando a formatação
+
+// Cumprimento e alterando idade do #header
+if(hours>5){
+    if(hours>12){
+        if(hours>18){
+            headerGreeting.innerHTML = "boa noite,"
+        }else{
+            headerGreeting.innerHTML = "boa tarde,"
+        }
+    }else{
+        headerGreeting.innerHTML = "bom dia,"
+    }
+}else {
+    headerGreeting.innerHTML = "boa noite,"
+}
+
+headerMyAge.innerHTML = `, tenho ${myAge} anos`
+
 // Muda o article knowledge para a apresentação padrão
 init(knowledgeArticle, knowledgeSections)
 function init (knowledgeId, sectionClass) {

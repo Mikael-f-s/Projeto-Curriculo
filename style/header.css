@@ -24,7 +24,7 @@
     height: 2px;
 }
 
-#header p {
+#header > p {
     max-width: 700px;
     text-align: justify;
     font-size: 20px;
