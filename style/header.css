@@ -12,6 +12,10 @@
     margin: 1em;
 }
 
+#header img {
+    width: 100px;
+}
+
 #header div:nth-child(2) {
     width: 100px;
     height: 100px;
