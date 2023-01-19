@@ -16,21 +16,17 @@ const myAge = Math.floor((fullDate - myBirthDate)/msToYear)
 // Iniciando a formatação
 
 // Cumprimento e alterando idade do #header
-if(hours>5){
-    if(hours>12){
-        if(hours>18){
-            headerGreeting.innerHTML = "boa noite,"
-        }else{
-            headerGreeting.innerHTML = "boa tarde,"
-        }
-    }else{
+greeting(hours, headerGreeting, myAge, headerMyAge)
+function greeting(hours, headerGreeting, myAge, headerMyAge){
+    if(hours<5 || hours>=18){
+        headerGreeting.innerHTML = "boa noite,"
+    }else if(hours<12){
         headerGreeting.innerHTML = "bom dia,"
+    }else {
+        headerGreeting.innerHTML = "boa tarde,"
     }
-}else {
-    headerGreeting.innerHTML = "boa noite,"
+    headerMyAge.innerHTML = `, tenho ${myAge} anos`
 }
-
-headerMyAge.innerHTML = `, tenho ${myAge} anos`
 
 // Muda o article knowledge para a apresentação padrão
 init(knowledgeArticle, knowledgeSections)
