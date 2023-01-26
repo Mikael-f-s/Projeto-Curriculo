@@ -20,6 +20,7 @@
     flex-flow: nowrap column;
     align-items: center;
     justify-items: center;
+    transition: .150s;
 }
 
 #knowledge nav ul {
@@ -43,4 +44,15 @@
     height: 0;
     font-size: 0;
     visibility: hidden;
+}
+
+#experiencies {
+    background-color: aquamarine;
+    width: 90%;
+    max-width: 700px;
+}
+
+#experiencies nav ul li {
+    display: flex;
+    flex-flow: row;
 }
