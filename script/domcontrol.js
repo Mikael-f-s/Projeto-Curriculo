@@ -2,6 +2,9 @@ const knowledgeArticle = document.querySelector('#knowledge')
 const knowledgeSections = knowledgeArticle.querySelectorAll('section')
 const knowledgeMenu = knowledgeArticle.children[0].children[0]
 const knowledgeItens = arrayKnowledge(knowledgeMenu.children, knowledgeSections)
+const experienciesArticle = document.querySelector('#experiencies')
+const experienciesLis = experienciesArticle.getElementsByClassName('experienciesActive')
+const experienciesLisSections = experienciesArticle.querySelectorAll('section')
 const themeSelecter = document.querySelector("#themeSelecter").querySelector('input')
 const body = document.querySelector('body')
 const headerGreeting = document.querySelector('#header').querySelector('p').children[0]
@@ -12,8 +15,9 @@ const myBirthDate = new Date(1998,06,02)
 const msToYear = 1000*60*60*24*365
 const myAge = Math.floor((fullDate - myBirthDate)/msToYear)
 
-
-// Iniciando a formatação
+for(let i of experienciesLisSections){
+    i.setAttribute('hidden','true')
+}
 
 // Cumprimento e alterando idade do #header
 greeting(hours, headerGreeting, myAge, headerMyAge)
