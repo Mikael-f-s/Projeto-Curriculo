@@ -1,12 +1,13 @@
+const body = document.querySelector('body')
 const knowledgeArticle = document.querySelector('#knowledge')
 const knowledgeSections = knowledgeArticle.querySelectorAll('section')
 const knowledgeMenu = knowledgeArticle.children[0].children[0]
 const knowledgeItens = arrayKnowledge(knowledgeMenu.children, knowledgeSections)
 const experienciesArticle = document.querySelector('#experiencies')
-const experienciesLis = experienciesArticle.getElementsByClassName('experienciesActive')
+const experienciesMenu = experienciesArticle.children[0].children[0]
+const experienciesH5 = experienciesArticle.querySelectorAll('.experiencieInactive')
 const experienciesLisSections = experienciesArticle.querySelectorAll('section')
 const themeSelecter = document.querySelector("#themeSelecter").querySelector('input')
-const body = document.querySelector('body')
 const headerGreeting = document.querySelector('#header').querySelector('p').children[0]
 const headerMyAge = document.querySelector('#header').querySelector('p').children[1]
 const fullDate = new Date()
@@ -14,10 +15,6 @@ const hours = fullDate.getHours()
 const myBirthDate = new Date(1998,06,02)
 const msToYear = 1000*60*60*24*365
 const myAge = Math.floor((fullDate - myBirthDate)/msToYear)
-
-for(let i of experienciesLisSections){
-    i.setAttribute('hidden','true')
-}
 
 // Cumprimento e alterando idade do #header
 greeting(hours, headerGreeting, myAge, headerMyAge)
@@ -33,13 +30,19 @@ function greeting(hours, headerGreeting, myAge, headerMyAge){
 }
 
 // Muda o article knowledge para a apresentação padrão
-init(knowledgeArticle, knowledgeSections)
-function init (knowledgeId, sectionClass) {
+initKnowledge(knowledgeArticle, knowledgeSections)
+function initKnowledge (knowledgeId, sectionClass) {
     knowledgeId.children[0].removeAttribute('hidden')
     for (var i=1; i<sectionClass.length; i++) {
         sectionClass[i].children[0].hidden = true
         sectionClass[i].removeAttribute('class')
         sectionClass[i].setAttribute('class', 'inactiveSection')
+    }
+}
+initExperiencies(experienciesLisSections)
+function initExperiencies (experienciesLisSections) {
+    for(let i of experienciesLisSections){
+        i.setAttribute('hidden','true')
     }
 }
 
@@ -66,6 +69,18 @@ function arrayKnowledge (knowMenu, knowSec) {
 knowledgeMenu.addEventListener("mouseover", (event) => {
     if(event.target.getAttribute('id')!=null||"") {
         knowledgeAtt(event.target.getAttribute('id'),knowledgeItens)
+    }
+})
+
+experienciesMenu.addEventListener("mouseover", (event) => {
+    if(event.target.getAttribute('class')=="experiencieInactive"){
+        console.log(experienciesH5[0])
+        for(i = 0; i < experienciesH5.length; i++){
+            experienciesH5[i].removeAttribute('class')
+            experienciesH5[i].setAttribute('class', 'experiencieInactive')
+        }
+        event.target.removeAttribute('class')
+        event.target.setAttribute('class', 'experiencieActive')
     }
 })
 

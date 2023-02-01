@@ -1,5 +1,5 @@
 #main {
-    width: 90vw;
+    width: 100vw;
     min-width: 300px;
     display:flex;
     flex-flow: nowrap column;
@@ -48,11 +48,35 @@
 
 #experiencies {
     background-color: aquamarine;
-    width: 90%;
-    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
 }
 
 #experiencies nav ul li {
+    height: 1em;
     display: flex;
     flex-flow: row;
+    margin: 2em 0;
+}
+
+#experiencies nav ul li h5 {
+    margin: 0px;
+}
+
+.experiencieActive {
+    font-size: 1.1em;
+}
+
+.experiencieInactive {
+    font-size: 1em;
+}
+
+#experiencies > div {
+    background-color: blue;
+    height: 250px;
+    min-width: 300px;
+    max-width: 500px;
+    width: 70%;
 }
