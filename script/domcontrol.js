@@ -7,6 +7,7 @@ const experienciesArticle = document.querySelector('#experiencies')
 const experienciesMenu = experienciesArticle.children[0].children[0]
 const experienciesH5 = experienciesArticle.querySelectorAll('.experiencieInactive')
 const experienciesLisSections = experienciesArticle.querySelectorAll('section')
+const experienciesDisplay = document.querySelector('#experienciesDescriptionActive')
 const themeSelecter = document.querySelector("#themeSelecter").querySelector('input')
 const headerGreeting = document.querySelector('#header').querySelector('p').children[0]
 const headerMyAge = document.querySelector('#header').querySelector('p').children[1]
@@ -65,7 +66,8 @@ function arrayKnowledge (knowMenu, knowSec) {
     return know
 }
 
-// Hover para o article knowledge
+// Hover para os articles knowledge e experiencies
+
 knowledgeMenu.addEventListener("mouseover", (event) => {
     if(event.target.getAttribute('id')!=null||"") {
         knowledgeAtt(event.target.getAttribute('id'),knowledgeItens)
@@ -74,13 +76,14 @@ knowledgeMenu.addEventListener("mouseover", (event) => {
 
 experienciesMenu.addEventListener("mouseover", (event) => {
     if(event.target.getAttribute('class')=="experiencieInactive"){
-        console.log(experienciesH5[0])
         for(i = 0; i < experienciesH5.length; i++){
             experienciesH5[i].removeAttribute('class')
             experienciesH5[i].setAttribute('class', 'experiencieInactive')
         }
         event.target.removeAttribute('class')
         event.target.setAttribute('class', 'experiencieActive')
+        let text = event.target.nextElementSibling.children[0].innerText
+        experiencieAtt(text, experienciesDisplay)
     }
 })
 
@@ -96,6 +99,9 @@ function knowledgeAtt(hoverItem, knowItens) {
     }
 }
 
+function experiencieAtt(text, display) {
+    display.innerHTML = text
+}
 // Verificando e mudando o tema da pagina
 
 themeSelecter.addEventListener('change', () => attTheme(body, themeSelecter))
