@@ -40,8 +40,9 @@ function initKnowledge (knowledgeId, sectionClass) {
         sectionClass[i].setAttribute('class', 'inactiveSection')
     }
 }
-initExperiencies(experienciesLisSections)
-function initExperiencies (experienciesLisSections) {
+initExperiencies(experienciesLisSections, experienciesDisplay)
+function initExperiencies (experienciesLisSections, experienciesDisplay) {
+    experienciesDisplay.parentNode.removeAttribute('hidden')
     for(let i of experienciesLisSections){
         i.setAttribute('hidden','true')
     }

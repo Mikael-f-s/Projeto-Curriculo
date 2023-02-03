@@ -52,8 +52,12 @@
     transition: .2s;
 }
 
-.lightTheme header, .lightTheme #knowledge section {
+.lightTheme header, .lightTheme #knowledge section, .lightTheme #experiencies {
     background: rgb(210, 212, 222);
+}
+
+.lightTheme #experiencies nav ul {
+    border-color: rgb(102, 108, 124);
 }
 
 .lightTheme header > div {
@@ -69,8 +73,12 @@
     transition: .2s;
 }
 
-.darkTheme header, .darkTheme #knowledge section {
+.darkTheme header, .darkTheme #knowledge section, .darkTheme #experiencies {
     background: rgb(45, 45, 59);
+}
+
+.darkTheme #experiencies nav ul {
+    border-color: rgb(210, 212, 222);
 }
 
 .darkTheme header > div {

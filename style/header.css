@@ -8,7 +8,7 @@
     font-weight: 100;
 }
 
-#header div, p, nav {
+#header div, #header p, #header nav {
     margin: 1em;
 }
 

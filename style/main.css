@@ -37,7 +37,7 @@
 
 .activeSection {
     margin: 1em 0;
-    height: 300px;
+    height: 150px;
 }
 
 .inactiveSection {
@@ -47,18 +47,30 @@
 }
 
 #experiencies {
-    background-color: aquamarine;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-flow: row;
-    justify-content: center;
 }
+
+#experiencies nav {
+    margin: 2rem 0 0 3rem;
+}
+
+#experiencies nav ul {
+    width: 20vw;
+    min-width: 150px;
+    padding-inline-start: 0;
+    border-width: 0 2px;
+    border-style:  solid;
+    padding: 1px 10px;
+}
+
 
 #experiencies nav ul li {
     height: 1em;
     display: flex;
     flex-flow: row;
-    margin: 2em 0;
+    margin: 1em 0 2em 0;
 }
 
 #experiencies nav ul li h5 {
@@ -74,7 +86,6 @@
 }
 
 #experiencies > div {
-    background-color: blue;
     height: 250px;
     min-width: 300px;
     max-width: 500px;
