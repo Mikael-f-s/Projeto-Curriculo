@@ -4,7 +4,7 @@ const knowledgeSections = knowledgeArticle.querySelectorAll('section')
 const knowledgeMenu = knowledgeArticle.children[0].children[0]
 const knowledgeItens = arrayKnowledge(knowledgeMenu.children, knowledgeSections)
 const experienciesArticle = document.querySelector('#experiencies')
-const experienciesMenu = experienciesArticle.children[0].children[0]
+const experienciesMenu = experienciesArticle.children[1].children[0].children[0]
 const experienciesH5 = experienciesArticle.querySelectorAll('.experiencieInactive')
 const experienciesLisSections = experienciesArticle.querySelectorAll('section')
 const experienciesDisplay = document.querySelector('#experienciesDescriptionActive')
@@ -17,6 +17,8 @@ const myBirthDate = new Date(1998,06,02)
 const msToYear = 1000*60*60*24*365
 const myAge = Math.floor((fullDate - myBirthDate)/msToYear)
 
+
+console.log(experienciesArticle.children[0].children[0])
 // Cumprimento e alterando idade do #header
 greeting(hours, headerGreeting, myAge, headerMyAge)
 function greeting(hours, headerGreeting, myAge, headerMyAge){

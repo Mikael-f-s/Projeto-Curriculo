@@ -9,8 +9,8 @@
     font-weight: 300;
 }
 
-#main article {
-    min-width: 400px;
+#knowledge {
+    margin: 50px 0;
 }
 
 #knowledge, #knowledge section {
@@ -49,11 +49,21 @@
 #experiencies {
     width: 80%;
     display: flex;
+    flex-flow: column;
+    align-content: center;
+}
+
+#experiencies > h1 {
+    text-align: center;
+}
+
+#experiencies > div {
+    display: flex;
     flex-flow: row;
 }
 
 #experiencies nav {
-    margin: 2rem 0 0 3rem;
+    margin: 2rem 0 0 5%;
 }
 
 #experiencies nav ul {
@@ -85,9 +95,12 @@
     font-size: 1em;
 }
 
-#experiencies > div {
+#experiencies > div div {
     height: 250px;
     min-width: 300px;
     max-width: 500px;
     width: 70%;
+    padding: 3em;
+    text-align: justify;
+    margin:auto;
 }
