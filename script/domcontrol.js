@@ -117,3 +117,4 @@ function attTheme(body, themeSelecter){
         body.setAttribute('class', 'lightTheme')
     }
 }
+
